@@ -1,0 +1,23 @@
+<p>entrenador-list works!</p>
+<h2>Entrenadors</h2>
+
+<table class="table">
+  <tr>
+    <th>Nom</th>
+    <th>Cognoms</th>
+    <th>Imatge</th>
+    <th>Accions</th>
+  </tr>
+
+  <tr *ngFor="let e of entrenadors">
+    <td>{{e.nom}}</td>
+    <td>{{e.cognoms}}</td>
+    <td>
+      <img *ngIf="e.imatge" [src]="'http://localhost:8000/api/imatge/'+e.imatge" width="50">
+    </td>
+    <td>
+      <button class="btn btn-sm btn-warning">Editar</button>
+      <button class="btn btn-sm btn-danger" (click)="eliminar(e.id)">Eliminar</button>
+    </td>
+  </tr>
+</table>

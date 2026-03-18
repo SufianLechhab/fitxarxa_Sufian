@@ -1,0 +1,22 @@
+<p>sessio-list works!</p>
+<h2>Sessions</h2>
+
+<table class="table">
+
+<tr>
+<th>Títol</th>
+<th>Data</th>
+<th>Places</th>
+<th>Entrenador</th>
+</tr>
+
+<tr *ngFor="let s of sessions">
+
+<td>{{s.titol}}</td>
+<td>{{s.dataP}}</td>
+<td>{{s.places}}</td>
+<td>{{s.entrenador.nom}} {{s.entrenador.cognoms}}</td>
+
+</tr>
+
+</table>
